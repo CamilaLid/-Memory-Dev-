@@ -1,0 +1,19 @@
+body{
+    background-color: #45464D;
+}
+@font-face {
+    font-family: 'supermilk';
+    src: local ("supermilk")url('supermilk.ttf') format('.ttf');
+}
+button{
+    font-family: 'supermilk';
+    background-color: #7563E3; /* Cor de fundo */
+    color: #F4FFB2; /* Cor do texto */
+    padding: 1px 105px; /* Espaçamento interno (top/bottom) e (left/right) */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    margin: 350px; /* Margem externa */
+    border: none; /* Remover a borda */
+    border-radius: 50px; /* Adicionar bordas arredondadas */
+   
+}
