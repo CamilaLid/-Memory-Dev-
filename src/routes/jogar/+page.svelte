@@ -70,9 +70,8 @@
   </script>
   
   <div class="App">
-    <h1>Magic Match</h1>
     <button on:click={shuffledCards}>
-      Novo Jogo
+      <input type="image" src="src\public\botao-reiniciar.png"> 
     </button>
     <div class="card-grid">
       {#each cards as card (card.id)}
@@ -105,18 +104,8 @@
             color: black;
         }
     button {
-      background: none;
-      border: 2px solid #fff;
-      padding: 6px 12px;
-      border-radius: 4px;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    button:hover {
-      background: #c23866;
-      color: black;
+      background-color: transparent;
+      border: none;
     }
     .card-grid {
         margin-top: 40px;

@@ -20,25 +20,27 @@
 
 <div class="texto">
 
-  <p>Este projeto de Jogo da Memória foi desenvolvido como parte do trabalho de
-  conclusão da disciplina de Programação Imperativa.</p>
+  <p>This Memory Game was developed as a project that takes part in the conclusion 
+    of the subject of Imperative Programming.
+  </p>
 
-  <p>Neste jogo, o objetivo é encontrar pares correspondentes de cartas,
-  virando-as uma de cada vez. Clique em uma carta para revelar seu conteúdo e,
-  em seguida, clique em outra carta para tentar encontrar o par correspondente.
-  Se você encontrar um par, as cartas permanecerão viradas para cima. Se não,
-  elas serão viradas de volta para baixo. Continue virando as cartas e procurando 
-  pares correspondentes.</p>
+  <p>In this game, the objective is to find the right pairs of cards, 
+    turning them one at a time. Select one of the cards to reveal the 
+    content of said card, and then select another card to see if you found a pair. 
+    If the cards you have turned have the same symbol, the cards will remain turned. 
+    If not, they will return to their initial state. Continue turning cards and 
+    searching for the corresponding pairs. The game will end when you find all the pairs.
+  </p>
 
-  Discentes: Camila Lídia, Lucas Souza, Mariana Tavares, Talita Vitória.
+  Developers: Camila Lídia, Lucas Souza, Mariana Tavares, Talita Vitória.
   <br>
-  Colaboradores: Izes Stella
+  Contributors: Izes Stella e Elison Felipe.
   <br>
-  Docente: Allan Diego
+  Teacher/supervisor: Allan Diego.
   <br>
   Instituto Federal De Pernambuco, Campus Igarassu
   <br>
-  Para mais informações sobre o nosso projeto, acesse nosso repositório no Github.
+  For more information about our project, access our Github repository.
 </div>
 
 </div>
