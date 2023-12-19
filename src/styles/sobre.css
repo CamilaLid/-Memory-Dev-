@@ -1,0 +1,39 @@
+@font-face {
+	font-family: sulphur;
+	src: url(../public/cream-DEMO.ttf);
+}
+
+html, body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: sulphur;
+	background-color: #45464D;
+	font-size: 2vh;
+}
+
+.topo{
+	display:flex;
+}
+
+img.logo-sobre {
+	align-items:center ;
+	margin-left: 60vh;
+	max-width: 500px;
+    max-height: 300px;
+}
+
+.texto{
+	text-align: justify;
+	font-family: sulphur;
+	color: #ffffff;
+	margin-left: 50vh;
+	margin-right: 50vh;
+}
