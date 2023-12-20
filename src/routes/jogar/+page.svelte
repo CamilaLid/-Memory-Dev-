@@ -113,8 +113,9 @@ const restartGame = () => {
   {#if gameComplete}
       <!-- Tela de FINAL -->
       <div class="game-complete">
-          <h2>Congratulations! You completed the game!</h2>
-          <p>Total Turns: {turns}</p>
+          <h1>Congratulations!</h1> 
+          <p>You found all the pairs in:</p>
+          <h2> {turns} Turns </h2>
           <button on:click={restartGame}>Play Again</button>
       </div>
   {/if}
