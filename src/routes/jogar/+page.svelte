@@ -9,7 +9,8 @@
     let imgJs = './src/public/card-js.png'
     let imgJava = './src/public/card-java.png'
     let imgCplus = './src/public/card-c++.png'
-  
+
+
     const cardImages = [
       { src: imgRuby, matched: false },
       { src: imgPython, matched: false },
@@ -41,9 +42,13 @@
   
     // Lidar com uma escolha
     const handleChoice = card => {
+      if (choiceOne && choiceOne.id === card.id){
+      return 
+      }
       choiceOne ? choiceTwo = card : choiceOne = card
     }
-  
+
+
     // Comparar 2 cartas selecionadas
     $: if (choiceOne && choiceTwo) {
       disabled = true
@@ -73,7 +78,8 @@
       turns = turns + 1
       disabled = false
     }
-  </script>
+
+</script>
 
   <div class="header-play">
 
@@ -104,9 +110,7 @@
           flipped={
             card === choiceOne ||
             card === choiceTwo ||
-            card.matched} />
+            card.matched}/> 
       {/each}
     </div>
   </div>
-
-  

@@ -31,7 +31,7 @@
 
   Developers: Camila Lídia, Lucas Souza, Mariana Tavares, Talita Vitória.
   <br>
-  Contributors: Izes Stella e Elison Felipe.
+  Contributors: Izes Stella, Elison Felipe e Marcos Antônio.
   <br>
   Teacher/supervisor: Allan Diego.
   <br>
