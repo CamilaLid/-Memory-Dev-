@@ -1,5 +1,5 @@
 @font-face {
-	font-family: sulphur;
+	font-family: cream;
 	src: url(../public/cream-DEMO.ttf);
 }
 
@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
-	font-family: sulphur;
+	font-family: cream;
 	background-color: #45464D;
 	font-size: 2vh;
 }
@@ -32,7 +32,7 @@ img.logo-sobre {
 
 .texto{
 	text-align: justify;
-	font-family: sulphur;
+	font-family: cream;
 	color: #ffffff;
 	margin-left: 50vh;
 	margin-right: 50vh;

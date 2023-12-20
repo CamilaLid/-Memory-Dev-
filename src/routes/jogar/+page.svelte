@@ -1,21 +1,22 @@
 <script>
     import SingleCard from './SingleCard.svelte'
+    import "../../styles/play.css"
   
     let imgCover = './src/public/card-verso.png'
-    let imgHelmet = './src/public/card-ruby.png'
-    let imgPotion = './src/public/card-python.png'
-    let imgRing = './src/public/card-php.png'
-    let imgScroll = './src/public/card-js.png'
-    let imgShield = './src/public/card-java.png'
-    let imgSword = './src/public/card-c++.png'
+    let imgRuby = './src/public/card-ruby.png'
+    let imgPython = './src/public/card-python.png'
+    let imgPhp = './src/public/card-php.png'
+    let imgJs = './src/public/card-js.png'
+    let imgJava = './src/public/card-java.png'
+    let imgCplus = './src/public/card-c++.png'
   
     const cardImages = [
-      { src: imgHelmet, matched: false },
-      { src: imgPotion, matched: false },
-      { src: imgRing, matched: false },
-      { src: imgScroll, matched: false },
-      { src: imgShield, matched: false },
-      { src: imgSword, matched: false },
+      { src: imgRuby, matched: false },
+      { src: imgPython, matched: false },
+      { src: imgPhp, matched: false },
+      { src: imgJs, matched: false },
+      { src: imgJava, matched: false },
+      { src: imgCplus, matched: false },
     ]
   
     let cards = []
@@ -23,7 +24,12 @@
     let choiceOne = null
     let choiceTwo = null
     let disabled = false
-  
+
+    // Volta para tela inicial
+    const backToMenu = () => {
+      
+      window.location.href ="/"
+    }
     // Embaralhar as cartas
     const shuffledCards = () => {
       const shuffledCards = [...cardImages, ...cardImages]
@@ -68,11 +74,26 @@
       disabled = false
     }
   </script>
-  
-  <div class="App">
-    <button on:click={shuffledCards}>
-      <input type="image" src="src\public\botao-reiniciar.png"> 
+
+  <div class="header-play">
+
+    <button on:click={backToMenu}>
+        <input type="image" src="src\public\botao-voltar.png" alt="back">
     </button>
+    <div>
+      <img src="src\public\logo-jogar.png" alt="logo"/>
+      <p class="turns">
+        Turns = {turns}
+      </p>
+    </div>
+    <button on:click={shuffledCards}>
+      <input type="image" src="src\public\botao-reiniciar.png" alt="restart"> 
+    </button>
+    
+  </div>  
+
+  <div class="App"> 
+    
     <div class="card-grid">
       {#each cards as card (card.id)}
         <SingleCard
@@ -86,31 +107,6 @@
             card.matched} />
       {/each}
     </div>
-    <p>
-      Turnos: {turns}
-    </p>
   </div>
 
-  <style>
-    .App {
-      max-width: 860px;
-      margin: 0 auto;
-        min-height: 100vh;
-        text-align:center;
-        padding: 1rem;
-        color: black;
-    }
-        h1 {
-            color: black;
-        }
-    button {
-      background-color: transparent;
-      border: none;
-    }
-    .card-grid {
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-    }
-    </style>
+  

@@ -1,10 +1,7 @@
 <script>
-  import "../../styles/sobre.css"
-
-
+  import "../../styles/about.css"
 
 </script>
-
 
 <div class="tudo">
 

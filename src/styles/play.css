@@ -1,0 +1,36 @@
+@font-face {
+	font-family: supermilk;
+	src: url(../public/Super-Milk.ttf);
+}
+
+.App {
+      max-width: 860px;
+      margin: 0 auto;
+      min-height: 100vh;
+      text-align:center;
+      padding: 1rem;
+      padding-right: 0.5rem;
+      color: black;
+    }
+    .header-play{
+      display: flex;
+      flex-direction: line;
+      justify-content: space-around;
+      padding: 0;
+    }
+    .turns {
+      font-family: supermilk;
+      color: #F4FFB2;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+    }
+    .card-grid {
+        padding-right: 5.5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        grid-template-rows: 12rem 12rem;
+
+    }
