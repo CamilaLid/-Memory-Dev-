@@ -34,3 +34,25 @@
         grid-template-rows: 12rem 12rem;
 
     }
+    .game-complete {
+      background-color: white;
+      border: 2px solid black;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 400px; /* Largura max da tela */
+      z-index: 999; 
+  }
+
+  /*botão "Play Again" */
+  .play-again-button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid black;
+      cursor: pointer;
+  }

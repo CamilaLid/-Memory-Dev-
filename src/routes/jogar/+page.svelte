@@ -9,6 +9,7 @@
     let imgJs = './src/public/card-js.png'
     let imgJava = './src/public/card-java.png'
     let imgCplus = './src/public/card-c++.png'
+    let gameComplete = false;
 
 
     const cardImages = [
@@ -79,38 +80,60 @@
       disabled = false
     }
 
+   
+// Verificar se as cartas estao viradas
+$: {
+    if (cards.every(card => card.matched)) {
+        gameComplete = true;
+    }
+}
+
+//  reiniciar o jogo depois que acabar
+const restartGame = () => {
+    shuffledCards();
+    gameComplete = false;
+}
+
 </script>
 
-  <div class="header-play">
-
-    <button on:click={backToMenu}>
-        <input type="image" src="src\public\botao-voltar.png" alt="back">
-    </button>
-    <div>
+<div class="header-play">
+  <button on:click={backToMenu}>
+      <input type="image" src="src\public\botao-voltar.png" alt="back">
+  </button>
+  <div>
       <img src="src\public\logo-jogar.png" alt="logo"/>
       <p class="turns">
-        Turns = {turns}
+          Turns = {turns}
       </p>
-    </div>
-    <button on:click={shuffledCards}>
-      <input type="image" src="src\public\botao-reiniciar.png" alt="restart"> 
-    </button>
-    
-  </div>  
-
-  <div class="App"> 
-    
-    <div class="card-grid">
-      {#each cards as card (card.id)}
-        <SingleCard
-          {card}
-          {imgCover}
-          {disabled}
-          {handleChoice}
-          flipped={
-            card === choiceOne ||
-            card === choiceTwo ||
-            card.matched}/> 
-      {/each}
-    </div>
   </div>
+  <button on:click={shuffledCards}>
+      <input type="image" src="src\public\botao-reiniciar.png" alt="restart"> 
+  </button>
+
+  {#if gameComplete}
+      <!-- Tela de FINAL -->
+      <div class="game-complete">
+          <h2>Congratulations! You completed the game!</h2>
+          <p>Total Turns: {turns}</p>
+          <button on:click={restartGame}>Play Again</button>
+      </div>
+  {/if}
+  
+</div>
+
+<div class="App"> 
+  <div class="card-grid">
+      {#each cards as card (card.id)}
+          <SingleCard
+              {card}
+              {imgCover}
+              {disabled}
+              {handleChoice}
+              flipped={
+                  card === choiceOne ||
+                  card === choiceTwo ||
+                  card.matched
+              }/> 
+      {/each}
+  </div>
+</div>
