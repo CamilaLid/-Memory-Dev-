@@ -85,6 +85,11 @@
 $: {
     if (cards.every(card => card.matched)) {
         gameComplete = true;
+        const mainContent = document.querySelector(".mainContent");
+        if (mainContent) {
+          mainContent.classList.remove("mainContent");
+          mainContent.classList.add("darken")
+        }
     }
 }
 
@@ -92,12 +97,19 @@ $: {
 const restartGame = () => {
     shuffledCards();
     gameComplete = false;
-}
-</script>
+    const mainContent = document.querySelector(".darken");
+      if (mainContent) {
+        mainContent.classList.remove("darken");
+        mainContent.classList.add("mainContent");
+      }
+  }
 
+
+</script>
+<div class="mainContent">
 <div class="header-play">
   <button on:click={backToMenu}>
-      <input type="image" src="src\public\botao-voltar.png" alt="back">
+      <input class="btn" type="image" src="src\public\botao-voltar.png" alt="back">
   </button>
   <div>
       <img src="src\public\logo-jogar.png" alt="logo"/>
@@ -106,7 +118,7 @@ const restartGame = () => {
       </p>
   </div>
   <button on:click={shuffledCards}>
-      <input type="image" src="src\public\botao-reiniciar.png" alt="restart"> 
+      <input class="btn" type="image" src="src\public\botao-reiniciar.png" alt="restart"> 
   </button>
 
   </div>
@@ -125,6 +137,7 @@ const restartGame = () => {
               }/> 
       {/each}
   </div>
+</div>
 </div>
 {#if gameComplete}
  <!-- Tela de FINAL -->

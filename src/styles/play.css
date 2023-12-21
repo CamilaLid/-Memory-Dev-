@@ -81,7 +81,7 @@
       font-size: 4vh; /* Tamanho da fonte */
       border: none; /* Remover a borda */
       border-radius: 31px; /* Adicionar bordas arredondadas */
-    box-shadow: 4px 5px 4px 0px rgba(0, 0, 0, 0.25)
+      box-shadow: 4px 5px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
   .button-end:hover{
@@ -90,4 +90,14 @@
     transform: scale(1.1);
     transition: 300ms;
     cursor: pointer;
+	  transform: scale(1.1);
+	  transition: 300ms;
+  }
+
+  .darken{
+    filter: blur(4px);
+  }
+
+  .mainContent {
+    display: block;
   }

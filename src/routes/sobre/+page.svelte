@@ -37,7 +37,8 @@
   <br>
   Instituto Federal De Pernambuco, Campus Igarassu
   <br>
-  For more information about our project, access our Github repository.
+  For more information about our project, access our <a href="https://github.com/camila062/-Memory-Dev-/tree/main" 
+  target="_blank">Github repository.</a>
 </div>
 
 </div>

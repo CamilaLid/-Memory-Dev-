@@ -30,10 +30,16 @@ img.logo-sobre {
     max-height: 300px;
 }
 
+	.btn-voltar-sobre:hover{
+	transform: scale(1.05);
+	transition: 300ms;
+}
+
 .texto{
 	text-align: justify;
 	font-family: cream;
 	color: #ffffff;
 	margin-left: 50vh;
 	margin-right: 50vh;
+	font-size: 13px;
 }
