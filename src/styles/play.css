@@ -3,6 +3,10 @@
 	src: url(../public/Super-Milk.ttf);
 }
 
+@font-face {
+  font-family: cream;
+  src: url(../public/cream-DEMO.ttf);
+}
 .App {
       max-width: 860px;
       margin: 0 auto;
@@ -34,9 +38,10 @@
         grid-template-rows: 12rem 12rem;
 
     }
+
     .game-complete {
       background-color: #C8D0FF;
-      border: none;
+      border-radius: 20px;
       padding: 20px;
       text-align: center;
       position: fixed;
@@ -45,14 +50,44 @@
       transform: translate(-50%, -50%);
       max-width: 400px; /* Largura max da tela */
       z-index: 999; 
+      box-shadow: 4px 5px 4px 0px rgba(0, 0, 0, 0.25)
   }
 
-  /*botão "Play Again" */
-  .play-again-button {
-      background-color: black;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: 2px solid black;
-      cursor: pointer;
+  .text{
+    font-family: supermilk;
+    font-size: 35px;
+    color: #7563E3;
+  }
+
+  .text1{
+    font-family: cream;
+    font-size: 20px;
+  }
+
+  .text2{ 
+    font-family: supermilk;
+    font-size: 25px;
+    color: #7563E3;
+  }
+
+  .button-end {
+      font-family: milk ;
+      background-color: #7563E3; /* Cor de fundo */
+      color: #F4FFB2;
+      width: 21vh;
+      height: 10vh;
+      flex-shrink: 0;
+      text-align: center; /* Alinhamento do texto */
+      font-size: 4vh; /* Tamanho da fonte */
+      border: none; /* Remover a borda */
+      border-radius: 31px; /* Adicionar bordas arredondadas */
+    box-shadow: 4px 5px 4px 0px rgba(0, 0, 0, 0.25)
+  }
+
+  .button-end:hover{
+    background-color: #F4FFB2;
+    color: #7563E3;
+    transform: scale(1.1);
+    transition: 300ms;
+    cursor: pointer;
   }

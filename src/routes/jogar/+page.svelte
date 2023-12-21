@@ -93,7 +93,6 @@ const restartGame = () => {
     shuffledCards();
     gameComplete = false;
 }
-
 </script>
 
 <div class="header-play">
@@ -110,18 +109,7 @@ const restartGame = () => {
       <input type="image" src="src\public\botao-reiniciar.png" alt="restart"> 
   </button>
 
-  {#if gameComplete}
-      <!-- Tela de FINAL -->
-      <div class="game-complete">
-          <h1>Congratulations!</h1> 
-          <p>You found all the pairs in:</p>
-          <h2> {turns} Turns </h2>
-          <button on:click={restartGame}>Play Again</button>
-      </div>
-  {/if}
-  
-</div>
-
+  </div>
 <div class="App"> 
   <div class="card-grid">
       {#each cards as card (card.id)}
@@ -138,3 +126,13 @@ const restartGame = () => {
       {/each}
   </div>
 </div>
+{#if gameComplete}
+ <!-- Tela de FINAL -->
+ <div class="game-complete">
+  <h1 class="text">Congratulations!</h1> 
+  <p class="text1">You found all the pairs in:</p>
+  <h2 class="text2"> {turns} Turns </h2>
+  <button class="button-end" on:click={restartGame}>PLAY AGAIN</button>
+  <a href="/" ><button class="button-end">MENU</button></a>
+</div>
+{/if}
